@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 import Spinner from '../Components/Spinner'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { AiOutlineEdit } from 'react-icons/ai';
 
 import { BsInfoCircle } from 'react-icons/bs'
-import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md'
+import { MdOutlineAddBox, MdOutlineDelete} from 'react-icons/md'
+
 
 
 const Home = () => {
@@ -42,7 +44,7 @@ const Home = () => {
                 <Spinner />
 
             ) : (
-                <table className='w-full border-seprate border-spacing-2'>
+                <table className='w-full border-seprate border-spacing-2 ounded-md '>
 
                     <thead>
                         <tr>
@@ -77,11 +79,11 @@ const Home = () => {
                                             <BsInfoCircle className='text2x1 text-green-800' />
                                         </Link>
 
-                                        <Link to={` /books/edit/${book._id}`}>
-                                            <BsInfoCircle className='text2x1 text-yellow-800' />
+                                        <Link to={`/books/edit/${book._id}`}>
+                                            < AiOutlineEdit className='text2x1 text-yellow-800' />
                                         </Link>
                                         
-                                        <Link to={` /books/delete/${book._id}`}>
+                                        <Link to={`/books/delete/${book._id}`}>
                                             <MdOutlineDelete className='text2x1 text-red-800' />
                                         </Link>
 
